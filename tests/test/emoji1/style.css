@@ -1,0 +1,245 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: table;
+  background: #0bb4cf;
+  margin: 0;
+}
+
+#container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.content {
+  background: white;
+  padding: 1em 0 1em 0;
+}
+
+.reaction {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+.reaction:hover .emoji {
+  transform: scale(1.1, 1.1);
+  transition: all 0.1s;
+}
+.reaction:hover .text {
+  color: #222;
+  transition: all 0.1s;
+}
+
+.emoji {
+  font-size: 4em;
+  cursor: pointer;
+}
+
+.count {
+  position: absolute;
+  top: -1em;
+  right: 0;
+  border-radius: 1.75em;
+  min-width: 1.25em;
+  height: 1.75em;
+  font: 600 0.9em "Muli", arial, sans-serif;
+  background: #e84855;
+  color: white;
+  border: 0.25em solid white;
+  padding: 0 0.25em;
+  cursor: pointer;
+}
+
+.text {
+  font: 400 1em/2.5em "Muli", arial, sans-serif;
+  color: #ccc;
+  cursor: pointer;
+}
+
+h1,
+h2 {
+  font: 700 2em/3em "Merriweather", georgia, serif;
+  text-align: center;
+  color: #222;
+}
+
+h2 {
+  line-height: 1.25em;
+  margin: 1.5em 0 0 0;
+}
+
+h3 {
+  font: 300 1em/2.5em "Muli", arial, sans-serif;
+  text-align: center;
+  color: #a6a6a6;
+  margin: 0 0 2.5em 0;
+}
+
+#modal {
+  position: absolute;
+  background: white;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 0 0.25em #ccc;
+}
+
+.popup {
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: 275px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 26em;
+  left: 7.5em;
+  width: 275px;
+  font-size: 0.8em;
+  padding: 0 1em 1em 1em;
+  margin: 0 0 3em 0;
+  border-radius: 1.5em;
+}
+.tooltip:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.15em;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-width: 0.75em;
+  border-style: solid;
+  border-color: transparent transparent white white;
+  box-shadow: 0.1em -0.1em 0.25em #ccc;
+  background: white;
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+  z-index: 100 !important;
+}
+.tooltip h2 {
+  margin: 0.75em 0 0 0;
+}
+.tooltip h3 {
+  margin: 0.75em 0 1.5em 0;
+  line-height: 1.25em;
+}
+.tooltip .social {
+  font-size: 1.75em;
+}
+.tooltip .fa-close {
+  bottom: -0.75em;
+  font-size: 1.25em;
+}
+
+.fa-close {
+  display: inline-block;
+  position: absolute;
+  top: -0.75em;
+  right: -0.75em;
+  text-align: center;
+  text-decoration: none;
+  color: #222;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  padding: 0.25em;
+  cursor: pointer;
+}
+
+.social {
+  font-size: 2.5em;
+  text-align: center;
+}
+.social .fa {
+  width: 1em;
+  text-decoration: none;
+  background: #222;
+  color: white;
+  margin: 0 0.15em;
+  padding: 0.25em;
+}
+.social .fa:hover {
+  opacity: 0.9;
+}
+.social .fa-facebook {
+  background: #3765a3;
+}
+.social .fa-twitter {
+  background: #6cadde;
+}
+.social .fa-tumblr {
+  background: #1c2f44;
+}
+
+.animate {
+  animation: bounce 0.5s;
+}
+
+.hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.settings {
+  font: 300 0.85em "Muli", arial, sans-serif;
+  color: #222;
+  margin: 3em 0 0 0;
+  padding: 1em 0 0 0;
+}
+.settings input[type="radio"] {
+  display: none;
+}
+.settings input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  border: 2px solid #0bb4cf;
+  width: 0.75em;
+  height: 0.75em;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.settings input[type="radio"] + label:before {
+  background: white;
+}
+.settings input[type="radio"]:checked + label:before {
+  background: #0bb4cf;
+}
+.settings label {
+  margin: 0 1em 0 0.5em;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

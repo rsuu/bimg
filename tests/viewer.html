@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BIMG</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@unocss/reset/normalize.min.css"
+    />
+
+    <link rel="stylesheet" href="/static/css3/viewer.css" />
+  </head>
+
+  <body>
+    <div id="main" bg="#303030" flex justify-center align-items="center">
+      <div
+        id="--l"
+        w="30%"
+        h="96vh"
+        opacity="1"
+        border="2px solid var(--gray)"
+        padding="4px 4px"
+      >
+        <div
+          id="-js--vec-imgs"
+          class="--l-img"
+          z-1
+          overflow-y-scroll
+          w="100%"
+          max-h="70vh"
+        >
+          <img src="./img/1.jpg" alt="" />
+          <img src="./img/2.jpg" alt="" />
+          <img src="./img/3.jpg" alt="" />
+          <img src="./img/4.jpg" alt="" />
+          <img src="./img/5.jpg" alt="" />
+          <img src="./img/6.jpg" alt="" />
+        </div>
+
+        <hr />
+        <div
+          id="-js--img-info"
+          class="--l-info"
+          max-h="22vh"
+          font-bold
+          overflow-y-scroll
+        >
+          <div text-center text-9>
+            <span id="-js--img-info-title" color="#777">filename</span>
+          </div>
+
+          <br />
+          <div text-left text-5 flex flex-col>
+            <span id="-js--img-info-size" class="size">123KB</span>
+            <span id="-js--img-info-wh" class="meta">100x200</span>
+            <span id="-js--img-info-uploder" class="user">self</span>
+            <span id="-js--img-info-meta" class="size">meta</span>
+          </div>
+
+          <br />
+          <div class="--l-tags" text-4>
+            <a href="">animal</a>
+            <a href="">cat</a>
+            <a href="">dog</a>
+            <a href="">here</a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="--r"
+        w="70%"
+        h="96vh"
+        border="2px solid var(--gray)"
+        overflow-y-scroll
+        relative
+      >
+        <div class="--r-img">
+          <img id="-js--center-img" src="/img/6.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div id="-js--fullpage" class="--fullpage"></div>
+    <div
+      id="-js--tool"
+      class="--r-tool"
+      left="40vw"
+      top="90vh"
+      float-center
+      absolute
+      z-index-9
+    >
+      <span id="-js--prev">prev</span>
+      <span id="-js--page-number">1/10</span>
+      <span id="-js--next">next</span>
+      <span id="-js--toggle">toggle</span>
+    </div>
+
+    <script type="module" src="/static/ts/viewer.js"></script>
+
+    <script src="https://unpkg.com/@unocss/runtime/attributify.global.js"></script>
+  </body>
+</html>

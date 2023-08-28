@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slide-In Sidebar</title>
+    <style>
+      body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+      }
+
+      #sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px; /* 初始时隐藏侧边栏 */
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        transition: left 0.3s ease-in;
+      }
+
+      #content {
+        margin-left: 0;
+        transition: margin-left 0.3s ease-in;
+      }
+
+      #toggle-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        padding: 10px;
+        color: #fff;
+        font-size: 20px;
+        background-color: #333;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var sidebar = document.getElementById("sidebar");
+        var content = document.getElementById("content");
+        var toggleButton = document.getElementById("toggle-button");
+
+        toggleButton.addEventListener("click", function () {
+          // 切换侧边栏的可见性以及内容区域的左边距
+          sidebar.style.left = sidebar.style.left === "-250px" ? "0" : "-250px";
+          content.style.marginLeft =
+            content.style.marginLeft === "250px" ? "0" : "250px";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <!-- 侧边栏内容 -->
+      <h2>Sidebar</h2>
+      <ul>
+        <li>Menu Item 1</li>
+        <li>Menu Item 2</li>
+        <li>Menu Item 3</li>
+      </ul>
+    </div>
+
+    <div id="content">
+      <!-- 内容区域 -->
+      <h1>Content</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
+        aliquid porro labore, modi id magni cumque, dolor adipisci, explicabo
+        sit error deserunt ea dignissimos ducimus asperiores saepe doloremque
+        minima repellat!
+      </p>
+    </div>
+
+    <div id="toggle-button">&#9776;</div>
+  </body>
+</html>

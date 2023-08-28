@@ -1,0 +1,68 @@
+@import "lib.css";
+@import "tag.css";
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
+  gap: 0 1rem;
+}
+
+.card {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  padding: 0.1rem;
+  box-sizing: border-box;
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+}
+
+.card-body {
+  width: 100%;
+  border-radius: 1px;
+  position: relative;
+  padding: 0 8px 8px 8px;
+  overflow: hidden;
+
+  background-color: var(--gray);
+}
+
+/**
+ * board type
+ */
+.card-top .board {
+  background: linear-gradient(-80deg, transparent 12%, var(--orange) 0);
+}
+.card-top a {
+  color: #000;
+  padding: 0 0.06rem 0 0.04rem;
+}
+.card-body img {
+  padding-bottom: 0.05rem;
+  width: 100%;
+  height: 100%;
+}
+
+.card-info {
+}
+.card-info span {
+}
+
+.card-title {
+  padding-bottom: 0.04rem;
+  letter-spacing: 0;
+  font-size: 1.2em;
+  line-height: 1em;
+}
+.card-title a {
+  color: #bbb;
+}
+
+.--clicked {
+  opacity: 0.6;
+}

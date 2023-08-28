@@ -1,0 +1,21 @@
+@import "utils.css";
+@import "theme.css";
+@import "nav.css";
+
+html,
+body {
+  background-color: var(--bg);
+}
+
+main {
+  max-width: 1000px;
+  padding-right: 8px;
+  margin: auto;
+}
+
+.--no-scroll {
+  /* Disable scrolling on <body> */
+  margin: 1px 3px;
+  height: 100%;
+  overflow: hidden;
+}

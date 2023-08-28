@@ -1,0 +1,36 @@
+.tag-box,
+.ups {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.01rem;
+  padding: 0.04rem 0.02rem;
+  font-size: 0.08rem;
+
+  color: none;
+}
+.tag-box::before {
+  position: relative;
+  content: "[";
+  float: left;
+  left: -0.14rem;
+}
+.tag-box::after {
+  position: relative;
+  content: "]";
+  float: right;
+  right: -0.13rem;
+}
+
+.ups a {
+  display: inline-block;
+  text-decoration: none;
+}
+.ups a:not(:last-child)::after {
+  content: "•";
+  color: var(--yellow);
+  font-size: 0.08rem;
+  font-weight: 1000;
+  font-style: bold;
+}

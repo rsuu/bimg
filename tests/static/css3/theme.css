@@ -1,0 +1,85 @@
+:root {
+  --fg: #ccc;
+  --bg: #232323;
+  --bg1: #2a2b2d;
+
+  --gray: #303030;
+  --orange: #fe7b22;
+}
+
+body {
+  color: var(--fg);
+  background-color: var(--bg);
+}
+a,
+.likelink {
+  color: rgb(255, 123, 33);
+}
+a:hover,
+.likelink:hover,
+.spoiler:hover a:hover,
+.open-spoiler a:hover {
+  color: rgb(58, 162, 255);
+}
+.likelink {
+  border-bottom-color: rgb(184, 78, 8);
+}
+.likelink:hover {
+  border-bottom-color: rgb(8, 78, 184);
+}
+.ll-h:hover .likelink {
+  color: rgb(58, 162, 255);
+  border-bottom-color: rgb(8, 78, 184);
+}
+h2.native {
+  background-color: rgb(50, 54, 56);
+}
+h2.native {
+  border-color: rgb(69, 75, 77);
+}
+hr {
+  border-color: rgb(74, 80, 83);
+}
+.reply {
+  background-color: rgb(50, 54, 56);
+}
+.reply:focus {
+  background-color: rgb(75, 48, 30);
+}
+.reply:target {
+  background-color: rgb(75, 48, 30);
+}
+.reply:focus {
+  background-color: rgb(50, 54, 56);
+}
+.reply:focus.reply:target {
+  background-color: rgb(75, 48, 30);
+}
+a.reflink {
+  color: rgb(205, 200, 193);
+}
+.pstcnt {
+  color: rgb(156, 196, 143);
+}
+.hand:hover,
+.hover-color:hover {
+  background-color: rgb(47, 50, 52);
+}
+.thrd-thumb {
+  color: rgb(173, 166, 155);
+}
+.open-spoiler {
+  background-color: rgb(69, 75, 77);
+}
+.open-spoiler {
+  color: rgb(205, 200, 193);
+}
+.unkfunc {
+  color: rgb(195, 227, 112);
+}
+.pale {
+  color: rgb(173, 166, 155);
+}
+.sage {
+  color: rgb(255, 33, 33);
+}

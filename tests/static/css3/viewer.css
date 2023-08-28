@@ -1,0 +1,28 @@
+html,
+body {
+  background-color: #232323;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.--l-img img,
+.--r-img img {
+  width: 100%;
+  height: auto;
+  padding: 4px 4px;
+}
+
+.--fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: #000;
+}

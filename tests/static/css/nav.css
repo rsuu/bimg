@@ -1,0 +1,42 @@
+@import "lib.css";
+
+nav {
+  display: flex;
+  position: fixed;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 200px;
+  z-index: 1;
+}
+
+nav .submenu li {
+  display: block;
+}
+
+nav li:hover .submenu {
+  display: block;
+}

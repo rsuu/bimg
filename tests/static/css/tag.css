@@ -1,0 +1,47 @@
+.tag-box,
+.ups {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.01rem;
+  padding: 0.04rem 0.02rem;
+  font-size: 0.08rem;
+
+  color: none;
+}
+.tag-box::before {
+  position: relative;
+  content: "[";
+  float: left;
+  left: -0.14rem;
+}
+.tag-box::after {
+  position: relative;
+  content: "]";
+  float: right;
+  right: -0.13rem;
+}
+
+.--dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px; /* 修改为所需大小 */
+  height: 10px; /* 修改为所需大小 */
+  background-color: #fff; /* 修改为所需颜色 */
+  border-radius: 50%;
+}
+
+.ups a {
+  display: inline-block;
+  text-decoration: none;
+}
+.ups a:not(:last-child)::after {
+  content: "•";
+  color: var(--yellow);
+  font-size: 0.08rem;
+  font-weight: 1000;
+  font-style: bold;
+}

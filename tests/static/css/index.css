@@ -1,0 +1,25 @@
+@import "lib.css";
+@import "tag.css";
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
+  gap: 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.card > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
